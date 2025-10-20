@@ -1,0 +1,33 @@
+// Colors
+$color-primary: #42567a;
+$color-accent-blue: #3877ee;
+$color-accent-pink: #ef5da8;
+$color-gradient-start: #3877ee;
+$color-gradient-end: #ef5da8;
+$color-border: #e2e5ec;
+$color-border-light: #cdced1;
+$color-border-mobile: #c7cdd9;
+$color-background: #f4f5f9;
+$color-dark: #303e58;
+$color-dark-opacity: rgba(48, 62, 88, 0.5);
+$color-dot-inactive: rgba(66, 86, 122, 0.4);
+$color-white: #fff;
+$color-shadow: rgba(56, 119, 238, 0.1);
+
+// Fonts
+$font-family-primary: var(--font-family);
+$font-family-secondary: var(--second-family);
+$font-family-pt-sans: "PT Sans", sans-serif;
+
+// Breakpoints
+$breakpoint-mobile: 320px;
+
+// Spacing
+$spacing-small: 20px;
+$spacing-medium: 80px;
+$spacing-large: 160px;
+
+// Sizes
+$circle-size: 530px;
+$dot-size-small: 30px;
+$dot-size-large: 56px;
