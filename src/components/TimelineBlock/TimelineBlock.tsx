@@ -13,6 +13,8 @@ import { calculatePoints } from "./utils";
 
 import "./timeline.scss";
 
+const POINTS = calculatePoints(timeRanges.length);
+
 export const Timeline: React.FC = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
 
@@ -29,10 +31,7 @@ export const Timeline: React.FC = () => {
   const { animatedStart, animatedEnd } = useTimelineAnimation(activeRange);
   useYearAnimation(activeIndex, containerRef);
 
-  const points = useMemo(
-    () => calculatePoints(timeRanges.length),
-    [timeRanges.length]
-  );
+  const points = POINTS;
 
   return (
     <section className="timeline" ref={containerRef}>
