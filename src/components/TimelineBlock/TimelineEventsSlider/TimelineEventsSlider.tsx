@@ -1,7 +1,8 @@
-import React, { useRef } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import { TimelineEventsSliderProps } from "../types";
+import "./TimelineEventsSlider.scss";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -11,14 +12,11 @@ export const TimelineEventsSlider: React.FC<TimelineEventsSliderProps> = ({
   rangeName,
   isSwitching,
 }) => {
-  const swiperContainerRef = useRef<HTMLDivElement | null>(null);
-
   return (
     <div
       className={`timeline__swiper-container ${
         isSwitching ? "timeline__swiper-container--switching" : ""
       }`}
-      ref={swiperContainerRef}
     >
       <div className="timeline-name">{rangeName}</div>
       <div className="timeline__swiper-wrapper">

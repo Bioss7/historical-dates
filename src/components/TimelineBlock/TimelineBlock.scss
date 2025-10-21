@@ -1,0 +1,81 @@
+@use "../../styles/variables" as *;
+
+.timeline {
+  padding-top: 215px;
+  position: relative;
+  overflow: hidden;
+  border-right: 1px solid $color-border;
+  border-left: 1px solid $color-border;
+
+  @media (max-width: $breakpoint-mobile) {
+    padding-top: 59px;
+    border: 0;
+  }
+
+  &__title {
+    position: absolute;
+    left: 78px;
+    top: 170px;
+    width: 353px;
+    font-family: $font-family-primary;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 120%;
+    color: $color-primary;
+
+    @media (max-width: $breakpoint-mobile) {
+      position: static;
+      width: 123px;
+      padding: 0 $spacing-small 56px;
+      font-size: 20px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    @media (max-width: $breakpoint-mobile) {
+      padding-bottom: 0;
+      padding-top: 58px;
+    }
+  }
+
+  &__bottom {
+    padding-top: 96px;
+    padding-bottom: 104px;
+    position: relative;
+    z-index: 1;
+
+    @media (max-width: $breakpoint-mobile) {
+      display: flex;
+      flex-direction: column-reverse;
+      padding-bottom: 0;
+      padding-top: 0;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 177px;
+    width: 5px;
+    height: 120px;
+    background: linear-gradient(
+      to bottom,
+      $color-gradient-start 0%,
+      $color-gradient-end 100%
+    );
+
+    @media (max-width: $breakpoint-mobile) {
+      display: none;
+    }
+  }
+}

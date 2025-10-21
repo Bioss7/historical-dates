@@ -1,0 +1,57 @@
+@use "../../../styles/variables" as *;
+
+.timeline__circle-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline__cross {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: -1;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    background: $color-border;
+    transform: translate(-50%, -50%);
+  }
+
+  &::before {
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 1px;
+  }
+
+  &::after {
+    top: 50%;
+    left: 50%;
+    width: 1px;
+    height: 1000vh;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    display: none;
+  }
+}
+
+.timeline__circle {
+  position: relative;
+  width: $circle-size;
+  height: $circle-size;
+  border-radius: 50%;
+  border: 1px solid $color-border-light;
+  transition: transform 1.8s ease;
+  z-index: 1;
+
+  @media (max-width: $breakpoint-mobile) {
+    display: none;
+  }
+}

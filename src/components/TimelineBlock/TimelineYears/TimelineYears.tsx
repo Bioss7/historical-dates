@@ -1,5 +1,6 @@
 import React from "react";
 import { TimelineYearsProps } from "../types";
+import "./TimelineYears.scss";
 
 export const TimelineYears: React.FC<TimelineYearsProps> = ({
   startYear,

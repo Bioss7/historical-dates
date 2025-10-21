@@ -1,0 +1,39 @@
+@use "../../../styles/variables" as *;
+
+.timeline__years {
+  position: absolute;
+  top: 400px;
+  left: 217px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 973px;
+
+  @media (max-width: $breakpoint-mobile) {
+    position: static;
+    transform: unset;
+    margin: 0 auto;
+    width: 273px;
+    height: 72px;
+  }
+}
+
+.tl-big-year {
+  transform: unset !important;
+  font-family: $font-family-primary;
+  font-weight: 700;
+  font-size: 200px;
+  line-height: 0.8;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: #5d5fef;
+
+  &--right {
+    color: $color-accent-pink;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 56px;
+  }
+}

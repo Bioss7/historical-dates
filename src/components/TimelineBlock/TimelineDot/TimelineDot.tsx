@@ -1,5 +1,6 @@
 import React from "react";
 import { TimeRange } from "../types";
+import "./TimelineDot.scss";
 
 interface TimelineDotProps {
   point: {

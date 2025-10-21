@@ -1,6 +1,7 @@
 import React from "react";
 import { formatRangeNumber } from "../utils";
 import { TimelineNavigationProps } from "../types";
+import "./TimelineNavigation.scss";
 
 export const TimelineNavigation: React.FC<TimelineNavigationProps> = ({
   currentIndex,

@@ -1,4 +1,4 @@
-import React, { useMemo, useRef } from "react";
+import React, { useRef } from "react";
 import { timeRanges } from "./data/timeRanges";
 import { TimelineCircle } from "./TimelineCircle";
 import { TimelineYears } from "./TimelineYears";
@@ -11,7 +11,7 @@ import {
 } from "./hooks";
 import { calculatePoints } from "./utils";
 
-import "./timeline.scss";
+import "./TimelineBlock.scss";
 
 const POINTS = calculatePoints(timeRanges.length);
 

@@ -1,6 +1,7 @@
 import React from "react";
 import { TimelineDot } from "../TimelineDot";
 import { TimelineCircleProps } from "../types";
+import "./TimelineCircle.scss";
 
 export const TimelineCircle: React.FC<TimelineCircleProps> = ({
   points,
